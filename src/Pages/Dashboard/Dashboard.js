@@ -53,7 +53,7 @@ const Dashboard = () => {
                         Pay
                     </Link>
                     <Link to={`${url}/myorder`} class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
-                        My Order
+                        My Orders
                     </Link>
                     <Link to={`${url}/review`} class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
                         Review

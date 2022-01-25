@@ -8,6 +8,7 @@ const PurchaseForm = ({ productId }) => {
     const initialInfo = {
         name: user.displayName,
         email: user.email,
+        quantity: 1,
         productId
     }
     const [userInfo, setUserInfo] = useState(initialInfo);
@@ -63,7 +64,7 @@ const PurchaseForm = ({ productId }) => {
                         </label>
                     </div>
                     <div className="md:w-2/3">
-                        <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="email" type="email" placeholder="Enter Your Email" defaultValue={user?.email} name="email" onBlur={handleOnBlur} required />
+                        <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="email" type="email" placeholder="Enter Your Email" defaultValue={user?.email} name="email" onBlur={handleOnBlur} required disabled />
                     </div>
                 </div>
                 <div className="md:flex md:items-center mb-6">
@@ -84,6 +85,16 @@ const PurchaseForm = ({ productId }) => {
                     </div>
                     <div className="md:w-2/3">
                         <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="address" type="text" placeholder="Enter Your Address" name="address" onBlur={handleOnBlur} required />
+                    </div>
+                </div>
+                <div className="md:flex md:items-center mb-6">
+                    <div className="md:w-1/3">
+                        <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" style={{ textAlign: "left" }} for="quantity">
+                            Quantity
+                        </label>
+                    </div>
+                    <div className="md:w-2/3">
+                        <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="address" defaultValue="1" type="number" placeholder="Enter Product Quantity" name="quantity" onBlur={handleOnBlur} required />
                     </div>
                 </div>
                 <div className="md:flex md:items-center">
