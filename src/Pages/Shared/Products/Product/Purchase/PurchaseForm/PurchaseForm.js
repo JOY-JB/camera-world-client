@@ -23,7 +23,6 @@ const PurchaseForm = ({ productId }) => {
 
     const handleOnSubmit = e => {
         e.preventDefault();
-
         // send data to server
         fetch("http://localhost:5000/purchase", {
             method: "POST",

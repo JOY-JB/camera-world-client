@@ -20,9 +20,6 @@ const Navbar = () => {
                         <Link className='mr-5 hover:text-gray-900' to="/products">
                             Products
                         </Link>
-                        <Link className='mr-5 hover:text-gray-900' to="/aboutUs">
-                            About Us
-                        </Link>
                         {
                             user?.email ?
                                 <Link className='mr-5 hover:text-gray-900' to="/dashboard">

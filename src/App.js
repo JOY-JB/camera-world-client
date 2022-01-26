@@ -8,7 +8,6 @@ import {
 import Navbar from './Pages/Shared/Navbar/Navbar';
 import Footer from './Pages/Shared/Footer/Footer';
 import Home from './Pages/Home/Home/Home';
-import AboutUs from './Pages/AboutUs/AboutUs';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import AuthProvider from './context/AuthProvider/AuthProvider';
@@ -29,9 +28,6 @@ function App() {
             </Route>
             <Route path="/products">
               <NavProducts></NavProducts>
-            </Route>
-            <Route path="/aboutUs">
-              <AboutUs></AboutUs>
             </Route>
             <Route path="/login">
               <Login></Login>

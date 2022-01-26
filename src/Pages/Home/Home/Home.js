@@ -3,7 +3,7 @@ import useAuth from '../../../Hooks/useAuth';
 import Banner from '../Banner/Banner';
 import FeaturedProducts from '../FeaturedProducts/FeaturedProducts';
 import LatestCamera from '../LatestCamera/LatestCamera';
-import Review from '../Review/Review';
+import Reviews from '../Reviews/Reviews';
 
 
 
@@ -23,7 +23,7 @@ const Home = () => {
             <Banner></Banner>
             <FeaturedProducts></FeaturedProducts>
             <LatestCamera></LatestCamera>
-            <Review></Review>
+            <Reviews></Reviews>
         </div>
     );
 };
