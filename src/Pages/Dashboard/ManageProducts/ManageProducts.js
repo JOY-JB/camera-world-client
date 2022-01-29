@@ -31,7 +31,7 @@ const ManageProducts = () => {
     return (
         // manage products table
         <div className="lg:w-10/12 sm:w-full">
-            <h2 className="text-3xl my-4 leading-7 text-gray-900 sm:text-4xl sm:truncate">
+            <h2 className="text-3xl py-4 leading-7 text-gray-900 sm:text-4xl sm:truncate">
                 Manage all products
             </h2>
 
