@@ -79,13 +79,13 @@ const Reviews = () => {
     };
     return (
         <section className="text-gray-600 body-font py-20">
-            <h2 class="text-3xl font-bold leading-7 text-gray-900 sm:text-4xl sm:truncate">
+            <h2 className="text-3xl font-bold leading-7 text-gray-900 sm:text-4xl sm:truncate">
                 Testimonial
             </h2>
             <div className="container px-5 py-14 mx-auto">
                 <Slider {...settings}>
                     {
-                        reviews.map(singleReview => <Review singleReview={singleReview}></Review>)
+                        reviews.map(singleReview => <Review key={singleReview._id} singleReview={singleReview}></Review>)
                     }
                 </Slider>
             </div>

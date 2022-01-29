@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const PurchaseProduct = ({ product }) => {
     const { _id, product_img_url, product_name, description, price } = product;
     return (
+        // this is product purchase card
         <div className="p-4 md:w-1/3">
             <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                 <img className="lg:h-48 md:h-36 w-full object-contain object-center" src={product_img_url}

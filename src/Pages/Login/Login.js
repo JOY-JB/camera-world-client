@@ -15,12 +15,13 @@ const Login = () => {
     }
 
     if (loading) {
-        return <div class=" flex justify-center items-center">
-            <div class="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
+        return <div className=" flex justify-center items-center">
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
         </div>
     }
 
     return (
+        // this is login page
         <div>
             <div className="bg-grey-lighter min-h-screen flex flex-col">
                 <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
@@ -35,8 +36,8 @@ const Login = () => {
                             placeholder="Email" />
 
                         {errors.email &&
-                            <div class=" mb-4 text-sm text-red-400 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
-                                <span class="font-medium">Email </span> field is required!!
+                            <div className=" mb-4 text-sm text-red-400 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+                                <span className="font-medium">Email </span> field is required!!
                             </div>
                         }
 
@@ -49,21 +50,21 @@ const Login = () => {
                             placeholder="Password" />
 
                         {errors.password &&
-                            <div class=" mb-4 text-sm text-red-400 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
-                                <span class="font-medium">Password </span> field is required!!
+                            <div className=" mb-4 text-sm text-red-400 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+                                <span className="font-medium">Password </span> field is required!!
                             </div>
                         }
 
                         {
                             error &&
-                            <div class="bg-red-200 relative text-red-500 py-2 px-3 rounded-lg mb-4">
+                            <div className="bg-red-200 relative text-red-500 py-2 px-3 rounded-lg mb-4">
                                 {error}
                             </div>
                         }
                         <button
                             type="submit"
                             className="w-full text-center py-3 rounded bg-green-400 text-white hover:bg-green-500 focus:outline-none my-1"
-                        >Create Account</button>
+                        >Login</button>
 
                     </form>
 

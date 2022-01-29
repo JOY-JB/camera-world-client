@@ -11,21 +11,26 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
+    const [admin, setAdmin] = useState(false);
 
+    // user register function
     const registerUser = (email, password, displayName, history) => {
         setLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
+
+                // save user
+                saveUser(displayName, email);
+
                 const newUser = { email, displayName }
                 setUser(newUser);
-                setUser(user);
                 history.push("/");
                 setError("");
 
                 updateProfile(auth.currentUser, {
                     displayName
-                }).then(() => {
+                }).then((user) => {
 
                 }).catch((error) => {
 
@@ -40,6 +45,7 @@ const useFirebase = () => {
             .finally(() => setLoading(false));
     }
 
+    // user login function
     const loginUser = (email, password, location, history) => {
         setLoading(true);
         signInWithEmailAndPassword(auth, email, password)
@@ -58,6 +64,7 @@ const useFirebase = () => {
             .finally(() => setLoading(false));
     }
 
+    // user observer
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -70,6 +77,7 @@ const useFirebase = () => {
         });
     }, [])
 
+    // user logout function
     const logoutUser = () => {
         setLoading(true);
         signOut(auth).then(() => {
@@ -80,8 +88,29 @@ const useFirebase = () => {
     }
 
 
+    //save user to database
+    const saveUser = (displayName, email) => {
+        const user = { displayName, email };
+
+        fetch("http://localhost:5000/adduser", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(user)
+        })
+    }
+
+    //check for admin
+    useEffect(() => {
+        fetch(`http://localhost:5000/user/${user.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data))
+    }, [user.email])
+
     return {
         user,
+        admin,
         loading,
         error,
         registerUser,

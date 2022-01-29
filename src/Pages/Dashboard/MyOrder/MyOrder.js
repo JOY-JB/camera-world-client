@@ -3,7 +3,8 @@ import OrderList from './OrderList/OrderList';
 
 const MyOrder = () => {
     return (
-        <div className='w-full mt-6'>
+        // my orders page
+        <div className='w-full mt-6 sm:text-xs'>
             <h2 className="text-3xl leading-7 text-gray-900 sm:text-4xl sm:truncate">
                 My Orders
             </h2>

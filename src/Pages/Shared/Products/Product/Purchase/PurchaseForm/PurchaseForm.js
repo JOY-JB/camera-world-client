@@ -9,6 +9,7 @@ const PurchaseForm = ({ productId }) => {
         name: user.displayName,
         email: user.email,
         quantity: 1,
+        status: "pending",
         productId
     }
     const [userInfo, setUserInfo] = useState(initialInfo);
@@ -41,6 +42,7 @@ const PurchaseForm = ({ productId }) => {
     }
 
     return (
+        // this is purchase form
         <div className='w-1/2'>
             <form className="w-full" onSubmit={handleOnSubmit}>
                 <h2 className="text-3xl font-bold leading-7 text-gray-900 sm:text-4xl sm:truncate">
@@ -48,7 +50,7 @@ const PurchaseForm = ({ productId }) => {
                 </h2>
                 <div className="md:flex md:items-center my-6">
                     <div className="md:w-1/3">
-                        <label className=" text-left block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" style={{ textAlign: "left" }} for="full-name">
+                        <label className=" text-left block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" style={{ textAlign: "left" }} htmlFor="full-name">
                             Full Name
                         </label>
                     </div>
@@ -58,7 +60,7 @@ const PurchaseForm = ({ productId }) => {
                 </div>
                 <div className="md:flex md:items-center mb-6">
                     <div className="md:w-1/3">
-                        <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" style={{ textAlign: "left" }} for="email">
+                        <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" style={{ textAlign: "left" }} htmlFor="email">
                             Email
                         </label>
                     </div>
@@ -68,7 +70,7 @@ const PurchaseForm = ({ productId }) => {
                 </div>
                 <div className="md:flex md:items-center mb-6">
                     <div className="md:w-1/3">
-                        <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" style={{ textAlign: "left" }} for="phone">
+                        <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" style={{ textAlign: "left" }} htmlFor="phone">
                             Phone
                         </label>
                     </div>
@@ -78,7 +80,7 @@ const PurchaseForm = ({ productId }) => {
                 </div>
                 <div className="md:flex md:items-center mb-6">
                     <div className="md:w-1/3">
-                        <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" style={{ textAlign: "left" }} for="address">
+                        <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" style={{ textAlign: "left" }} htmlFor="address">
                             Address
                         </label>
                     </div>
@@ -88,7 +90,7 @@ const PurchaseForm = ({ productId }) => {
                 </div>
                 <div className="md:flex md:items-center mb-6">
                     <div className="md:w-1/3">
-                        <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" style={{ textAlign: "left" }} for="quantity">
+                        <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" style={{ textAlign: "left" }} htmlFor="quantity">
                             Quantity
                         </label>
                     </div>

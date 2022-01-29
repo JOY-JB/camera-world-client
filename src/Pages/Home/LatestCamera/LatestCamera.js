@@ -2,8 +2,9 @@ import React from 'react';
 
 const LatestCamera = () => {
     return (
+        // this is latest camera section
         <section className="text-gray-600 body-font pt-16">
-            <h2 class="text-3xl font-bold leading-7 text-gray-900 sm:text-4xl sm:truncate">
+            <h2 className="text-3xl font-bold leading-7 text-gray-900 sm:text-4xl sm:truncate">
                 Latest Camera
             </h2>
             <div className="container px-5 py-14 mx-auto flex flex-wrap">

@@ -22,12 +22,13 @@ const Register = () => {
     }
 
     if (loading) {
-        return <div class=" flex justify-center items-center">
-            <div class="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
+        return <div className=" flex justify-center items-center">
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
         </div>
     }
 
     return (
+        // this is register page
         <div>
             <div className="bg-grey-lighter min-h-screen flex flex-col">
                 <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
@@ -41,8 +42,8 @@ const Register = () => {
                             placeholder="Full Name" />
 
                         {errors.fullname &&
-                            <div class=" mb-4 text-sm text-red-400 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
-                                <span class="font-medium">Name </span> field is required!!
+                            <div className=" mb-4 text-sm text-red-400 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+                                <span className="font-medium">Name </span> field is required!!
                             </div>
                         }
 
@@ -54,8 +55,8 @@ const Register = () => {
                             placeholder="Email" />
 
                         {errors.email &&
-                            <div class=" mb-4 text-sm text-red-400 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
-                                <span class="font-medium">Email </span> field is required!!
+                            <div className=" mb-4 text-sm text-red-400 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+                                <span className="font-medium">Email </span> field is required!!
                             </div>
                         }
 
@@ -68,8 +69,8 @@ const Register = () => {
                             placeholder="Password" />
 
                         {errors.password &&
-                            <div class=" mb-4 text-sm text-red-400 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
-                                <span class="font-medium">Password </span> field is required!!
+                            <div className=" mb-4 text-sm text-red-400 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+                                <span className="font-medium">Password </span> field is required!!
                             </div>
                         }
 
@@ -82,8 +83,8 @@ const Register = () => {
                             placeholder="Confirm Password" />
 
                         {errors.confirmPassword &&
-                            <div class=" mb-4 text-sm text-red-400 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
-                                <span class="font-medium">Confirm password </span> field is required!!
+                            <div className=" mb-4 text-sm text-red-400 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+                                <span className="font-medium">Confirm password </span> field is required!!
                             </div>
                         }
 
