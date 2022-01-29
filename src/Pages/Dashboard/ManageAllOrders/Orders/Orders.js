@@ -6,7 +6,7 @@ const Orders = ({ order, handleDelete }) => {
     const { _id, email, quantity, productId, status } = order;
     const [product, setProduct] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${productId}`)
+        fetch(`https://damp-plateau-38093.herokuapp.com/product/${productId}`)
             .then(res => res.json())
             .then(data => setProduct(data));
     }, []);

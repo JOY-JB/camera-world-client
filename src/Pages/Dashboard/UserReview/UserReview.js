@@ -31,7 +31,7 @@ const UserReview = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        fetch("http://localhost:5000/addreview", {
+        fetch("https://damp-plateau-38093.herokuapp.com/addreview", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

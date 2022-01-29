@@ -5,7 +5,7 @@ const ManageProducts = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:5000/allproduct")
+        fetch("https://damp-plateau-38093.herokuapp.com/allproduct")
             .then(res => res.json())
             .then(data => setProducts(data));
     }, []);
@@ -14,7 +14,7 @@ const ManageProducts = () => {
         const newProducts = products.filter(product => product._id !== id);
 
         if (window.confirm("Are you sure you want to delete this product?")) {
-            fetch(`http://localhost:5000/deleteproduct/${id}`, {
+            fetch(`https://damp-plateau-38093.herokuapp.com/deleteproduct/${id}`, {
                 method: "DELETE",
             })
                 .then(res => res.json())

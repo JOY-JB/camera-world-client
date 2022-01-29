@@ -92,7 +92,7 @@ const useFirebase = () => {
     const saveUser = (displayName, email) => {
         const user = { displayName, email };
 
-        fetch("http://localhost:5000/adduser", {
+        fetch("https://damp-plateau-38093.herokuapp.com/adduser", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -103,7 +103,7 @@ const useFirebase = () => {
 
     //check for admin
     useEffect(() => {
-        fetch(`http://localhost:5000/user/${user.email}`)
+        fetch(`https://damp-plateau-38093.herokuapp.com/user/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data))
     }, [user.email])

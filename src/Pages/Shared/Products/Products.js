@@ -6,12 +6,12 @@ const Products = ({ name, limit }) => {
 
     useEffect(() => {
         if (limit) {
-            fetch(`http://localhost:5000/allproduct?limit=${limit}`)
+            fetch(`https://damp-plateau-38093.herokuapp.com/allproduct?limit=${limit}`)
                 .then(res => res.json())
                 .then(data => setProducts(data));
 
         } else {
-            fetch(`http://localhost:5000/allproduct`)
+            fetch(`https://damp-plateau-38093.herokuapp.com/allproduct`)
                 .then(res => res.json())
                 .then(data => setProducts(data));
         }

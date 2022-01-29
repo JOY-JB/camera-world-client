@@ -11,7 +11,7 @@ const MakeAnAdmin = () => {
 
         const adminEmail = { email }
 
-        fetch("http://localhost:5000/addadmin", {
+        fetch("https://damp-plateau-38093.herokuapp.com/addadmin", {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

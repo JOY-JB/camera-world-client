@@ -8,7 +8,7 @@ const OrderList = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:5000/orders?email=${user?.email}`)
+            fetch(`https://damp-plateau-38093.herokuapp.com/orders?email=${user?.email}`)
                 .then(res => res.json())
                 .then(data => setMyOrders(data))
         }
@@ -18,7 +18,7 @@ const OrderList = () => {
     const handleDelete = (id) => {
         const newOrders = myOrders.filter(order => order._id !== id);
         if (window.confirm("Are you sure you want to delete this Product")) {
-            fetch(`http://localhost:5000/deleteorder/${id}`, {
+            fetch(`https://damp-plateau-38093.herokuapp.com/deleteorder/${id}`, {
                 method: "DELETE",
             })
                 .then(res => res.json())

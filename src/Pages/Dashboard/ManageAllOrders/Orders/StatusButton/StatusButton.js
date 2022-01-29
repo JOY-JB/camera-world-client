@@ -30,7 +30,7 @@ const StatusButton = ({ status, id }) => {
         setNewStatus(option);
         const data = { id, status: option }
 
-        fetch("http://localhost:5000/changeorderstatus", {
+        fetch("https://damp-plateau-38093.herokuapp.com/changeorderstatus", {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

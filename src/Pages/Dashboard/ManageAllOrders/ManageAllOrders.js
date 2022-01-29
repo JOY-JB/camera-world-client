@@ -5,7 +5,7 @@ const ManageAllOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allorders`)
+        fetch(`https://damp-plateau-38093.herokuapp.com/allorders`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }
@@ -15,7 +15,7 @@ const ManageAllOrders = () => {
     const handleDelete = (id) => {
         const newOrders = orders.filter(order => order._id !== id);
         if (window.confirm("Are you sure you want to delete this Order")) {
-            fetch(`http://localhost:5000/deleteorder/${id}`, {
+            fetch(`https://damp-plateau-38093.herokuapp.com/deleteorder/${id}`, {
                 method: "DELETE",
             })
                 .then(res => res.json())

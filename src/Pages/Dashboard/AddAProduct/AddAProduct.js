@@ -6,7 +6,7 @@ const AddAProduct = () => {
 
     // add a product to database
     const onSubmit = data => {
-        fetch("http://localhost:5000/addproduct", {
+        fetch("https://damp-plateau-38093.herokuapp.com/addproduct", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

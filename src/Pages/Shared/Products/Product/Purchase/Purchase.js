@@ -9,7 +9,7 @@ const Purchase = () => {
     const { id } = useParams();
     const [product, setProduct] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://damp-plateau-38093.herokuapp.com/product/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])
